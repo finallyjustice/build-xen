@@ -16,18 +16,22 @@ http://bits.xensource.com/oss-xen/release/4.6.1/xen-4.6.1.tar.gz
 
 6. ./configure --prefix=/soft/xen --sysconfdir=/soft/xen
 
-7. make xen & sudo cp xen.gz /boot/. & grub-update & dom0_mem=4096m
+7. make xen & sudo cp xen.gz /boot/. & grub-update & dom0_mem=8192m
 
 8. make tools
 
 9. make install-tools
 
-10. export LD_LIBRARY_PATH=/soft/xen/lib
+10. "su" after reboot machine.
 
-11. export PYTHONPATH=/soft/xen/lib/python2.7/site-packages
+11. Create bridge via bridge.sh.
 
-12. PATH=$PATH:/soft/xen/bin:/soft/xen/sbin
+12. export LD_LIBRARY_PATH=/soft/xen/lib
 
-13. Run "/soft/xen/init.d/xencommons"
+13. export PYTHONPATH=/soft/xen/lib/python2.7/site-packages
 
-14. Boot guest with xl
+14. PATH=$PATH:/soft/xen/bin:/soft/xen/sbin
+
+15. Run "/soft/xen/init.d/xencommons start"
+
+16. Boot guest with xl

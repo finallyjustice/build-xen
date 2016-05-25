@@ -1,0 +1,12 @@
+guest_os_type = 'linux'
+bootloader = '/soft/xen/bin/pygrub'
+name = "template.pv"
+memory = 2048
+maxmem = 2048
+vcpus = 2
+maxvcpus = 2
+vif = [ 'mac=00:19:38:dd:e8:ca,bridge=br0' ]
+disk = [ '/home/zhang/img/oel61.img,raw,xvda,rw' ]
+vfb = ['type=vnc,vncunused=1,vnclisten=0.0.0.0,keymap=en-us']
+#sdl = 1
+vnc = 1
